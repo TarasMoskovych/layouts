@@ -1,0 +1,33 @@
+@import './partials/mixins.less';
+@import './partials/variables.less';
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+
+html,
+body {
+    .clean;
+    font-family: 'Roboto', sans-serif;
+    color: @black;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    .clean;
+}
+
+.view-port {
+    margin: 0 auto;
+    max-width: @viewPort;
+    max-width: 1000px;
+}
+
+.wrapper {
+    background-color: @white;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    width: 100%;
+}

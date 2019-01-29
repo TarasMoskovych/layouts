@@ -1,0 +1,49 @@
+@import './../partials/mixins.less';
+@import './../partials/variables.less';
+
+.testimonials {
+    background: url('img/footer_bg.jpg') no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: @testimonials-height;
+
+    &__content {
+        width: 50%;
+
+        &__heading2 {
+            font-size: @mediumSize;
+            font-weight: normal;
+            letter-spacing: 2px;
+        }
+
+        &__author {
+            align-items: center;
+            display: flex;
+
+            & > div {
+                text-align: center;
+            }
+        }
+
+        &__text {
+            & p {
+                font-size: @smallSize;
+                line-height: 1.5;
+                margin: 0 0 10px 0;
+            }
+        }
+
+        &__next {
+            display: flex;
+            justify-content: flex-end;
+
+            & span {
+                cursor: pointer;
+            }
+        }
+
+        &__button {
+            text-align: center;
+        }
+    }
+}

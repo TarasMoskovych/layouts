@@ -1,0 +1,44 @@
+@import './../partials/mixins.less';
+@import './../partials/variables.less';
+
+.nav {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    height: @nav-height;
+    width: 100%;
+
+    &__left {
+        & i {
+            cursor: pointer;
+            font-size: @baseSize;
+        }
+
+        & span {
+            font-size: @baseSize;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+    }
+
+    &__right {
+        align-items: center;
+        display: flex;
+
+        &__phone {
+            background-color: @yellow;
+            border-radius: 10px;
+            text-align: center;
+
+            & span {
+                border-bottom: 1px dotted @black;
+                font-size: @smallSize;
+            }
+        }
+
+        & i {
+            cursor: pointer;
+            font-size: @baseSize;
+        }
+    }
+}

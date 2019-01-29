@@ -1,0 +1,30 @@
+@import './../partials/mixins.less';
+@import './../partials/variables.less';
+
+.advantage {
+    background-color: @grey;
+    text-align: center;
+
+    &__heading2 {
+        font-size: @mediumSize;
+        font-weight: normal;
+        letter-spacing: 2px;
+    }
+
+    &__row {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    &__col {
+        padding: 10px;
+
+        & img {
+            margin-bottom: 20px;
+        }
+
+        & h3 {
+            margin-bottom: 20px;
+        }
+    }
+}

@@ -1,0 +1,52 @@
+@import './../partials/mixins.less';
+@import './../partials/variables.less';
+
+.steps {
+    text-align: center;
+
+    & .steps__tiles {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    & .tile {
+        display: flex;
+        flex-direction: column;
+        width: 28%;
+
+        & .tile__header {
+            background-color: @yellow;
+            border-radius: 7px 7px 0 0;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-align: center;
+        }
+
+        & .tile__content {
+            background-color: @grey;
+            border-radius: 0 0 7px 7px;
+            flex-grow: 1;
+            text-align: left;
+
+            & p {
+                font-style: 13px;
+                margin-bottom: 5px;
+            }
+
+            & ul {
+                .clean;
+
+                font-style: 13px;
+                padding: 10px 0 0 30px;
+
+                & li {
+                    line-height: 1.5;
+                }
+            }
+
+            & .red {
+                color: @red;
+            }
+        }
+    }
+}

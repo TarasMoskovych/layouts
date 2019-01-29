@@ -1,0 +1,22 @@
+@import './../partials/mixins.less';
+@import './../partials/variables.less';
+
+.header {
+    .flex-center;
+
+    background: url('img/header_bg.jpg') no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: @header-height;
+    justify-content: flex-start;
+
+    &__heading1 {
+        font-size: @largeSize;
+        font-weight: normal;
+    }
+
+    &__heading4 {
+        font-size: @mediumSize;
+        font-weight: normal;
+    }
+}

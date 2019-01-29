@@ -1,0 +1,117 @@
+@import './../partials/mixins.less';
+@import './../partials/variables.less';
+
+.solutions {
+    &__heading2 {
+        font-size: @mediumSize;
+        font-weight: normal;
+        letter-spacing: 2px;
+        text-align: center
+    }
+
+    &__row {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    &__col {
+        background-color: @yellow;
+        border-radius: 5px;
+        padding: 5px;
+        position: relative;
+        width: 25%;
+
+        &__best-seller {
+            display: flex;
+            position: relative;
+            justify-content: center;
+
+            & .content {
+                border-radius: 10px;
+                color: @red;
+                font-style: 13px;
+                font-weight: bold;
+                padding: 6px 30px 0;
+                text-transform: uppercase;
+                top: -24px;
+            }
+
+            & > div {
+                background-color: @yellow;
+                position: absolute;
+            }
+
+            & .left,
+            & .right {
+                height: 27px;
+                top: -17px;
+                transform: rotate(45deg);
+                width: 30px;
+            }
+
+            & .left {
+                left: 40px;
+            }
+
+            & .right {
+                right: 37px;
+            }
+        }
+
+        &__header {
+            padding: 30px;
+
+            & h3 {
+                font-size: @baseSize;
+                font-weight: normal;
+
+                & span {
+                    display: inline-block;
+
+                    .first-letter;
+                }
+            }
+        }
+
+        &__content {
+            background-color: @white;
+            height: 200px;
+            margin-bottom: 10px;
+            padding: 15px;
+            position: relative;
+
+            & ul {
+                .clean;
+
+                list-style-image: url('img/checkbox.png');
+                padding: 10px 0 0 30px;
+
+                & li {
+                    font-size: @smallSize;
+                    font-weight: bold;
+                    padding-left: 5px;
+
+                    & span {
+                        position: relative;
+                        top: -7px;
+                    }
+                }
+            }
+
+            & .content__cost {
+                bottom: 5px;
+                font-size: @mediumSize;
+                display: flex;
+                left: 90px;
+                position: absolute;
+                text-align: center;
+            }
+        }
+
+        &__footer {
+            font-weight: bold;
+            margin-bottom: 5px;
+            text-align: center;
+        }
+    }
+}

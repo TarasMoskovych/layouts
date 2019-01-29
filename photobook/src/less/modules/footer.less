@@ -1,0 +1,60 @@
+@import './../partials/mixins.less';
+@import './../partials/variables.less';
+
+.footer {
+    background-color: @yellow;
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+
+        &__links {
+            display: flex;
+            width: 50%;
+
+            & ul {
+                .clean-list;
+                .footer-border;
+
+                margin-right: 30px;
+                width: 27%;
+
+                &.first-letter li span {
+                    display: inline-block;
+
+                    .first-letter;
+                }
+
+                & li {
+                    line-height: 1.8;
+
+                    & a {
+                        color: @black;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+
+        &__social {
+            .footer-border;
+
+            width: 10%;
+
+            & i {
+                cursor: pointer;
+                font-size: @baseSize;
+                margin-right: 5px;
+            }
+        }
+    }
+
+    &__copyright {
+        font-size: @smallSize;
+        font-weight: bold;
+        text-align: center;
+    }
+}
