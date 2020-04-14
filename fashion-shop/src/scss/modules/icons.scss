@@ -1,0 +1,70 @@
+.icons {
+  @include display-flex(initial, nowrap);
+
+  &__search {
+    margin-left: 12px;
+    position: relative;
+
+    button {
+      appearance: none;
+      background: none;
+      box-shadow: none;
+      border: none;
+      cursor: pointer;
+      display: none;
+      height: 15px;
+      margin: 0;
+      padding: 0;
+      position: relative;
+      width: 16px;
+      z-index: 2;
+    }
+
+    input {
+      @include font(16px, $normal, initial, 16px);
+      appearance: none;
+      font-family: $font-family;
+      box-sizing: border-box;
+      border: none;
+      border-radius: 22px;
+      box-shadow: 0 0 10px 0 $black;
+      color: $black;
+      left: -145px;
+      opacity: 0;
+      padding: 5px 54px 5px 10px;
+      position: absolute;
+      top: -10px;
+      transition: .3s;
+      width: 170px;
+      z-index: -1;
+    }
+
+    &--active {
+      .icons {
+        &__img {
+          display: none;
+        }
+      }
+
+      button {
+        display: block;
+      }
+
+      input {
+        opacity: 1;
+        z-index: 1;
+      }
+    }
+
+
+  }
+
+  &__cart {
+    margin-right: 12px;
+  }
+
+  &__img {
+    cursor: pointer;
+    display: block;
+  }
+}

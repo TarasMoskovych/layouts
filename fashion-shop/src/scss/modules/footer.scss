@@ -1,0 +1,15 @@
+.footer {
+  padding: 10px 0;
+  text-align: center;
+
+  p {
+    @include font(14px, $light, initial, 30px);
+    color: $gray7;
+    margin: 20px 0;
+  }
+
+  img {
+    @include img;
+    margin: 40px auto 30px;
+  }
+}

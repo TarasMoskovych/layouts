@@ -1,0 +1,87 @@
+.banner {
+  @include display-flex(flex-end, nowrap);
+  background: url('../img/banner1.jpg') left center no-repeat $blue;
+  background-size: cover;
+  margin: 25px 0;
+  padding: 45px 0;
+
+  @media (max-width: $screen-xl-max) {
+    background-position: -30px 0;
+  }
+
+  @media (max-width: $screen-lg-max) {
+    background-position: -140px 0;
+  }
+
+  @media (max-width: $screen-md-max) {
+    background: $blue;
+  }
+
+  &--left {
+    background-image: url('../img/banner2.jpg');
+    background-color: $gray4;
+    justify-content: flex-start;
+
+    .banner {
+      &__info {
+        margin-left: 70px;
+        margin-right: 0;
+
+        @media (max-width: $screen-lg-max) {
+          margin-left: 0;
+        }
+      }
+
+      &__btn {
+        @include btn($black, 14px, 23px, 0.7px, 70px, 205px, $white);
+        border: none;
+        margin: 35px auto 0;
+        padding: 24px 0;
+      }
+    }
+  }
+
+  &__info {
+    flex-basis: 630px;
+    margin-right: 70px;
+    text-align: center;
+
+    @media (max-width: $screen-md-max) {
+      box-sizing: border-box;
+      flex-basis: 100%;
+      padding: 0 10px;
+    }
+
+    @media (max-width: $screen-xl-max) {
+      margin-right: 40px;
+    }
+
+    @media (max-width: $screen-lg-max) {
+      margin-right: 0;
+    }
+  }
+
+  &__title {
+    @include font(26px, $semibold, 2.6px, 30px);
+    text-transform: uppercase;
+  }
+
+  &__text {
+    @include font(14px, $normal, 5.6px, 20px);
+    color: $gray2;
+    margin: 15px 0;
+    text-transform: uppercase;
+  }
+
+  &__btn {
+    @include btn($white, 12px, 20px, 2.16px, 60px, 250px, $black);
+    margin: 35px auto 0;
+    padding: 18px 0;
+    border: 2px solid $white;
+
+    &:hover {
+      background: $blue;
+      border-color: $white;
+    }
+  }
+}
