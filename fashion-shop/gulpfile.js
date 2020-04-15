@@ -134,4 +134,4 @@ gulp.task('copy', () =>
 gulp.task('clean', () => del(config.output));
 
 gulp.task('default', gulp.series('clean', 'copy', 'sass', 'serve'));
-gulp.task('build', gulp.series('clean', 'copy', 'sass', 'js', 'images', 'svg'));
+gulp.task('build', gulp.series('clean', 'copy', 'sass', 'js', 'svg'));
