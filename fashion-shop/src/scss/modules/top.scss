@@ -1,0 +1,36 @@
+.top {
+  border-bottom: 6px solid $border-color;
+  padding: 30px 0;
+
+  &__left {
+    @media (max-width: $screen-sm-max) {
+      flex-basis: 100%;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+  }
+
+  &__right {
+    @media (max-width: $screen-xs-max) {
+      flex-basis: 100%;
+      justify-content: center;
+    }
+  }
+
+  &__wrap {
+    @include display-flex;
+  }
+
+  &__menu {
+    flex-basis: 58%;
+
+    @media (max-width: $screen-sm-max) {
+      flex-basis: 80%;
+    }
+
+    @media (max-width: $screen-xs-max) {
+      flex-basis: 100%;
+      margin-bottom: 15px;
+    }
+  }
+}
