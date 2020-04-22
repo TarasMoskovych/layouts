@@ -1,0 +1,56 @@
+.integrations {
+  background-color: $white-gray;
+  padding: 140px 0;
+
+  @media (max-width: $screen-lg) {
+    padding: 50px 0;
+  }
+
+  @include title;
+
+  &__divider {
+    @include divider($gray4);
+  }
+
+  &__block {
+    @include display-flex;
+    align-items: initial;
+    margin-top: 50px;
+
+    @media (max-width: $screen-sm) {
+      justify-content: center;
+    }
+  }
+
+  &__item {
+    align-items: center;
+    background-color: $white;
+    box-shadow: 0 1px rgba(31, 31, 31, .09);
+    border: 2px solid transparent;
+    cursor: pointer;
+    display: flex;
+    flex-basis: 18%;
+    justify-content: center;
+    height: 100px;
+    margin: 15px 0;
+    transition: .3s;
+
+    @media (max-width: $screen-sm) {
+      flex-basis: 29%;
+      margin: 15px 1.5%;
+    }
+
+    @media (max-width: $screen-xs) {
+      flex-basis: 100%;
+      margin: 10px 0;
+    }
+
+    &:hover {
+      border-color: $red;
+    }
+
+    img {
+      max-width: 100%;
+    }
+  }
+}

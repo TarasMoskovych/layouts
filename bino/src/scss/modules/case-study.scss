@@ -1,0 +1,54 @@
+.case-study {
+  background-color: $white-gray;
+  padding: 140px 0;
+
+  @media (max-width: $screen-lg) {
+    padding: 50px 0;
+  }
+
+  @include title;
+
+  &__divider.divider {
+    @include divider($black);
+  }
+
+  &__block {
+    @include display-flex {
+      flex-wrap: nowrap;
+    };
+    margin-top: 60px;
+
+    @media (max-width: $screen-sm) {
+      flex-direction: column;
+    }
+  }
+
+  &__left {
+    flex-basis: 665px;
+    position: relative;
+    z-index: 1;
+
+    @media (max-width: $screen-lg) {
+      flex-basis: 50%;
+    }
+  }
+
+  &__right {
+    img {
+      margin-left: -80px;
+    }
+
+    @media (max-width: $screen-lg) {
+      flex-basis: 50%;
+
+      img {
+        max-width: 100%;
+        margin-left: 0;
+      }
+    }
+
+    @media (max-width: $screen-sm) {
+      margin-top: 15px;
+    }
+  }
+}

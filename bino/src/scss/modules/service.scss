@@ -1,0 +1,121 @@
+.service {
+  background-color: $light-black;
+  margin: 140px 0;
+  padding: 150px 0;
+  position: relative;
+
+  &::after {
+    content: '';
+    background: url('../img/services-bg.jpg') right top no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    display: block;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 44%;
+  }
+
+  @media (max-width: $screen-lg) {
+    margin: 50px 0;
+    padding: 50px 0;
+  }
+
+  @media (max-width: $screen-sm) {
+    padding: 50px 15px;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  &__block {
+    text-align: right;
+    width: 56%;
+
+    @media (max-width: $screen-sm) {
+      text-align: left;
+      width: 100%;
+    }
+  }
+
+  &__title {
+    @include font(36px, $bold, 36px, 3.6px);
+    border-right: 6px solid $red;
+    color: $white-gray;
+    font-family: $title-font-family;
+    margin-bottom: 30px;
+    margin-right: 80px;
+    padding-right: 25px;
+    text-transform: uppercase;
+
+    @media (max-width: $screen-sm) {
+      border-left: 6px solid $red;
+      border-right: none;
+      padding-left: 25px;
+      padding-right: 0;
+    }
+  }
+
+  &__item {
+    margin: 55px 80px 55px auto;
+    max-width: 665px;
+    position: relative;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @media (max-width: $screen-sm) {
+      box-sizing: border-box;
+      margin: 25px 0;
+      max-width: 100%;
+      padding-right: 80px;
+    }
+
+    p {
+      @include font(14px, $normal, 29px);
+      color: $gray4;
+      font-family: $title-font-family;
+
+      &:first-of-type {
+        @include font(18px, $semibold);
+        color: $red;
+        font-family: $main-font-family;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  &__icon {
+    background-color: $white-gray;
+    background-clip: padding-box;
+    border: 5px solid rgba(255, 255, 255, 0.1);
+    border-top-color: rgba(0, 0, 0, 0.2);
+    border-right-color: rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    height: 64px;
+    position: absolute;
+    right: -117px;
+    transform: translate(0, -50%) rotate(45deg);
+    top: 65px;
+    width: 64px;
+    z-index: 1;
+
+    @media (max-width: $screen-sm) {
+      border: 5px solid rgba(255, 255, 255, 0.1);
+      right: 15px;
+    }
+  }
+
+  &__img {
+    fill: $red;
+    height: 30px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    width: 30px;
+  }
+}

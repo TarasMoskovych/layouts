@@ -1,0 +1,19 @@
+.socials {
+  align-items: center;
+  display: flex;
+
+  li {
+    margin-right: 20px;
+  }
+
+  &__img {
+    fill: $gray4;
+    height: 25px;
+    transition: .3s;
+    width: 20px;
+
+    &:hover {
+      fill: $red;
+    }
+  }
+}

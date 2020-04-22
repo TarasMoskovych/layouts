@@ -1,0 +1,52 @@
+.free {
+  background: url('../img/free-bg.jpg') center no-repeat;
+  background-size: cover;
+  padding: 140px 0;
+  position: relative;
+  text-align: center;
+
+  @media (max-width: $screen-lg) {
+    padding: 50px 0;
+  }
+
+  &::after {
+    background-color: rgba(0, 0, 0, .6);
+    content: '';
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+  }
+
+  &__wrap {
+    position: relative;
+    z-index: 2;
+  }
+
+  P {
+    color: $white;
+    margin: 12px 0;
+  }
+
+  &__title {
+    font-size: 36px;
+    text-transform: capitalize;
+
+    span {
+      font-weight: $semibold;
+    }
+  }
+
+  &__text {
+    @include font(18px, $normal, 36px);
+  }
+
+  &__btn {
+    @include btn {
+      margin-top: 55px;
+    };
+  }
+}

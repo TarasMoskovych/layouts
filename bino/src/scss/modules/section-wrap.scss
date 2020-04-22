@@ -1,0 +1,35 @@
+.section-wrap {
+  position: relative;
+
+  &__icon {
+    a {
+      background-color: $white-gray;
+      background-clip: padding-box;
+      border: 5px solid rgba(255, 255, 255, .25);
+      border-radius: 50%;
+      bottom: 8%;
+      height: 64px;
+      left: 50%;
+      position: absolute;
+      transform: translate(-50%, 15px);
+      width: 64px;
+      z-index: 2;
+
+      &:hover {
+        .section-wrap__image {
+          animation: rotate 2s infinite;
+        }
+      }
+    }
+  }
+
+  &__image {
+    fill: $red;
+    height: 30px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+  }
+}

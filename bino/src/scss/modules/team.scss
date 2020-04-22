@@ -1,0 +1,223 @@
+.team {
+  background: url('../img/team-line.png') center bottom no-repeat,
+              url('../img/team-bg.jpg') center no-repeat;
+  margin-top: 140px;
+  padding: 140px 0 470px;
+
+  @media (max-width: $screen-lg) {
+    margin: 50px 0;
+  }
+
+  @media (max-width: $screen-md) {
+    background: url('../img/team-bg.jpg') center no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    padding: 50px 0;
+  }
+
+  @include title;
+
+  &__wrap {
+    position: relative;
+  }
+
+  &__title {
+    color: $white;
+  }
+
+  &__text {
+    color: $white-gray;
+  }
+
+  &__divider {
+    @include divider($white);
+  }
+
+  &__block {
+    @media (max-width: $screen-md) {
+      @include display-flex;
+    }
+
+    @media (max-width: $screen-sm) {
+      justify-content: center;
+    }
+  }
+
+  &__item {
+    cursor: pointer;
+    position: absolute;
+    width: 200px;
+
+    &::after {
+      background-color: $white;
+      bottom: -60px;
+      content: '';
+      display: block;
+      height: 50px;
+      opacity: 0;
+      left: 50%;
+      position: absolute;
+      pointer-events: none;
+      transform: translate(-50%);
+      transition: .3s;
+      width: 1px;
+    }
+
+    &:hover {
+      .team__info,
+      &::after {
+        opacity: 1;
+      }
+
+      .team {
+
+        &__info {
+          z-index: 1;
+        }
+
+        &__img {
+          transform: scale(1.2);
+
+          &::after {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    &:nth-of-type(1) {
+      bottom: -230px;
+      left: 0;
+    }
+
+    &:nth-of-type(2) {
+      bottom: -195px;
+      left: 265px;
+    }
+
+    &:nth-of-type(3) {
+      bottom: -195px;
+      left: 530px;
+    }
+
+    &:nth-of-type(4) {
+      bottom: -230px;
+      right: 190px;
+    }
+
+    &:nth-of-type(5) {
+      bottom: -205px;
+      right: 0;
+    }
+
+    @media (max-width: $screen-lg) {
+      &:nth-of-type(1) {
+        bottom: -215px;
+      }
+
+      &:nth-of-type(2) {
+        bottom: -190px;
+        left: 200px;
+      }
+
+      &:nth-of-type(3) {
+        bottom: -190px;
+        left: 390px;
+      }
+
+      &:nth-of-type(4) {
+        bottom: -225px;
+        right: 200px;
+      }
+
+      &:nth-of-type(5) {
+        bottom: -225px;
+      }
+    }
+
+    @media (max-width: $screen-md) {
+      bottom: auto !important;
+      flex-basis: 20%;
+      left: auto !important;
+      margin: 25px 0;
+      position: relative;
+      right: auto !important;
+      width: auto;
+
+      &::after {
+        display: none;
+      }
+    }
+
+    @media (max-width: $screen-sm) {
+      flex-basis: 45%;
+    }
+
+    @media (max-width: $screen-xs) {
+      flex-basis: 100%;
+    }
+  }
+
+  &__img {
+    border: 3px solid $red;
+    border-radius: 50%;
+    height: 51px;
+    margin: 0 auto;
+    overflow: hidden;
+    transition: .3s;
+    position: relative;
+    width: 51px;
+
+    &::after {
+      background-color: rgba(231, 76, 60, .5);
+      border-radius: 50%;
+      content: '';
+      display: block;
+      height: 100%;
+      left: 0;
+      opacity: 0;
+      position: absolute;
+      transition: .3s;
+      top: 0;
+      width: 100%;
+    }
+
+    img {
+      @include img;
+    }
+  }
+
+  &__info {
+    bottom: -160px;
+    opacity: 0;
+    position: absolute;
+    text-align: center;
+    transition: .3s;
+    width: 100%;
+    z-index: -1;
+
+    p {
+      @include font(14px, $normal, 24px, 1.4px);
+      color: $white;
+      margin: 10px 0;
+
+      &:first-of-type {
+        @include font($fs: 24px, $fw: $semibold, $ls: 1.8px);
+        color: $red;
+
+        @media (max-width: $screen-md) {
+          font-size: 18px;
+        }
+      }
+
+      &:last-of-type {
+        font-family: $title-font-family;
+      }
+    }
+
+    @media (max-width: $screen-md) {
+      opacity: 1;
+      position: static;
+    }
+  }
+}
