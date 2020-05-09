@@ -1,0 +1,148 @@
+.keep {
+  background-color: $white-gray;
+  padding: 140px 0;
+
+  @media (max-width: $screen-lg) {
+    padding: 50px 0;
+  }
+
+  @include title;
+
+  &__divider {
+    @include divider($gray4);
+  }
+
+  &__block {
+    @include display-flex;
+    align-items: initial;
+    margin-top: 60px;
+  }
+
+  &__left,
+  &__right {
+    background-color: $white;
+    border-radius: 2px / 5px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .1);
+    box-sizing: border-box;
+    padding: 30px 95px;
+  }
+
+  &__left {
+    flex-basis: 40.8%;
+
+    @media (max-width: $screen-lg) {
+      padding: 30px;
+    }
+  }
+
+  &__right {
+    @include display-flex;
+    flex-basis: 56.8%;
+    padding: 0 95px;
+
+    @media (max-width: $screen-lg) {
+      padding: 0 30px;
+    }
+  }
+
+  &__left,
+  &__right {
+    @media (max-width: $screen-sm) {
+      flex-basis: 100%;
+      margin: 10px 0;
+      padding: 30px;
+    }
+  }
+
+  &__form {
+    flex-basis: 100%;
+  }
+
+  &__info {
+    margin: 55px 0;
+
+    @media (max-width: $screen-sm) {
+      margin: 25px 0;
+    }
+
+    a,
+    p {
+      @include font($fs: 18px, $lh: 24px);
+      color: $gray4;
+      margin: 20px 0;
+
+      &.keep__info-title {
+        @include font(24px, $semibold);
+        color: $red;
+        font-family: $title-font-family;
+        text-transform: uppercase;
+      }
+    }
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  &__input {
+    margin: 20px 0;
+    position: relative;
+
+    input,
+    textarea,
+    label {
+      @include font(14px, $semibold, 24px);
+      color: $gray4;
+      width: 100%;
+    }
+
+    input,
+    textarea {
+      border: 0;
+      border-bottom: 1px solid $gray3;
+      box-sizing: border-box;
+      box-shadow: none;
+      padding: 7px 0;
+      transition: .3s;
+
+      &:focus {
+        border-bottom-color: $gray4;
+      }
+
+      &:focus + label,
+      &:not(:placeholder-shown) + label {
+        font-size: 12px;
+        transform: translateY(-20px);
+      }
+    }
+
+    textarea {
+      height: 100px;
+      outline: none;
+      resize: none;
+    }
+
+    label {
+      left: 0;
+      position: absolute;
+      overflow: hidden;
+      pointer-events: none;
+      text-overflow: ellipsis;
+      top: 5px;
+      transition: .3s;
+      white-space: nowrap;
+    }
+  }
+
+  &__btn {
+    margin: 25px 0;
+
+    button {
+      @include btn {
+        cursor: pointer;
+        padding: 14px 0;
+        width: 157px;
+      };
+    }
+  }
+}

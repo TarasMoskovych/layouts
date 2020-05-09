@@ -1,0 +1,16 @@
+.buttons {
+  margin-top: 60px;
+
+  a {
+    @include btn($two-buttons: true);
+
+    @media (max-width: $screen-xs) {
+      display: block;
+      margin: 15px auto;
+
+      &:first-child {
+        margin: 15px auto;
+      }
+    }
+  }
+}

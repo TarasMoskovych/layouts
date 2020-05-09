@@ -1,0 +1,117 @@
+.advantages {
+  border-bottom: 1px solid $gray2;
+  margin-bottom: 140px;
+  padding-bottom: 60px;
+
+  @media (max-width: $screen-lg) {
+    margin-bottom: 50px;
+    padding-bottom: 50px;
+  }
+
+  &__block {
+    @include display-flex;
+  }
+
+  &__item {
+    cursor: pointer;
+    flex-basis: 23.5%;
+    margin: 20px 0;
+    text-align: center;
+
+    @media (max-width: $screen-sm) {
+      flex-basis: 49%;
+    }
+
+    @media (max-width: $screen-xs) {
+      flex-basis: 100%;
+    }
+
+    &:hover {
+      .advantages {
+        &__icon {
+          border-color: $red;
+          transform: rotate(45deg);
+        }
+
+        &__img {
+          transform: translate(-50%, -50%) rotate(-45deg);
+        }
+
+        &__title {
+          color: $red;
+        }
+      }
+    }
+
+    &:nth-child(1) {
+      .advantages__img {
+        height: 12px;
+        width: 32px;
+      }
+    }
+
+    &:nth-child(2) {
+      .advantages__img {
+        height: 23px;
+        width: 27px;
+      }
+    }
+
+    &:nth-child(3) {
+      .advantages__img {
+        height: 35px;
+        width: 30px;
+      }
+    }
+
+    &:nth-child(4) {
+      .advantages__img {
+        height: 25px;
+        width: 25px;
+      }
+    }
+  }
+
+  &__icon {
+    border: 1px solid $gray3;
+    height: 73px;
+    margin: 20px auto;
+    position: relative;
+    transition: .3s;
+    width: 73px;
+  }
+
+  &__img {
+    fill: $red !important;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: .3s;
+  }
+
+  &__title,
+  &__text {
+    @include font(12px, $light, 20px, 0.9px);
+    color: $gray4;
+    font-family: $title-font-family;
+    margin: 15px 0;
+  }
+
+  &__title {
+    @include font(18px, $semibold, auto, 1.35px);
+    font-family: $main-font-family;
+    color: $gray5;
+    text-transform: uppercase;
+
+    &::after {
+      background: #888;
+      border-bottom: 1px solid #e1e1e1;
+      content: '';
+      display: block;
+      margin: 15px auto;
+      height: 1px;
+      width: 41px;
+    }
+  }
+}

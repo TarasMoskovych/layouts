@@ -1,0 +1,39 @@
+.footer {
+  background-color: $light-black;
+  padding: 35px 0;
+
+  &__wrap {
+    @include display-flex;
+    align-items: initial;
+
+    @media (max-width: $screen-xs) {
+      justify-content: center;
+      text-align: center;
+    }
+  }
+
+  &__left,
+  &__right {
+    @media (max-width: $screen-xs) {
+      flex-basis: 100%;
+    }
+  }
+
+  &__right {
+    @media (max-width: $screen-xs) {
+      margin-top: 15px;
+    }
+
+    p {
+      @include font(14px, $semibold, 24px);
+      color: $gray4;
+      text-transform: capitalize;
+    }
+  }
+
+  &__socials {
+    @media (max-width: $screen-xs) {
+      justify-content: center;
+    }
+  }
+}

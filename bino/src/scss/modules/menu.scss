@@ -1,0 +1,47 @@
+.menu {
+  ul {
+    @include display-flex;
+
+    @media (max-width: $screen-xs) {
+      justify-content: center;
+    }
+
+    li {
+      margin: 0 5px;
+
+      @media (max-width: $screen-sm) {
+        margin: 5px;
+      }
+    }
+
+    a {
+      @include font(14px, $normal, 16px);
+      color: $white-gray;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: .3s;
+
+      &:after {
+        content: '';
+        background: $red;
+        display: block;
+        height: 1px;
+        margin-top: 5px;
+        transition: width .3s;
+        width: 0;
+      }
+
+      &:hover {
+        color: $red;
+
+        &:after {
+          width: 100%;
+
+          @media (max-width: $screen-sm) {
+            width: 0;
+          }
+        }
+      }
+    }
+  }
+}

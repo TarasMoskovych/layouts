@@ -1,0 +1,64 @@
+.history {
+  @include display-flex {
+    align-items: initial;
+  };
+  margin: 140px auto;
+
+  @media (max-width: $screen-lg) {
+    margin: 50px auto;
+  }
+
+  @media (max-width: $screen-sm) {
+    flex-direction: column;
+  }
+
+  &__left {
+    flex-basis: 43.2%;
+    margin-right: 80px;
+
+    @media (max-width: $screen-lg) {
+      align-self: center;
+      margin-right: 35px;
+    }
+
+    @media (max-width: $screen-sm) {
+      margin-bottom: 50px;
+      margin-right: 0;
+    }
+
+    img {
+      @include img;
+    }
+  }
+
+  &__right {
+    flex-basis: calc(100% - 43.2% - 80px);
+
+    @media (max-width: $screen-lg) {
+      flex-basis: calc(100% - 43.2% - 35px);
+    }
+  }
+
+  &__btn {
+    @include btn {
+      margin-top: 20px;
+    };
+  }
+
+  p {
+    @include font(14px, $normal, 29px);
+    color: $gray4;
+    font-family: $title-font-family;
+    margin: 25px 0;
+
+    &.history__title {
+      @include font(36px, $bold, 36px, 3.6px);
+      border-left: 6px solid $red;
+      color: $gray5;
+      margin-bottom: 30px;
+      margin-top: 0;
+      padding-left: 25px;
+      text-transform: uppercase;
+    }
+  }
+}

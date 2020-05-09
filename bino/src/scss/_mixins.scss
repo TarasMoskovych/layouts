@@ -1,0 +1,124 @@
+@mixin min-max($min-width, $max-width, $padding) {
+  min-width: $min-width;
+  max-width: $max-width;
+  padding: 0 $padding;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+@mixin display-flex($justify-content: space-between, $flex-wrap: wrap) {
+  align-items: center;
+  display: flex;
+  flex-wrap: $flex-wrap;
+  justify-content: $justify-content;
+  @content;
+}
+
+@mixin font($fs, $fw: $normal, $lh: auto, $ls: initial) {
+  font-size: $fs;
+  font-weight: $fw;
+  letter-spacing: $ls;
+  line-height: $lh;
+  @content;
+}
+
+@mixin btn($bg: $red, $two-buttons: false) {
+  @include font(14px, $bold, 16px, 0.14px);
+  background-color: $bg;
+  border: 2px solid $bg;
+  border-radius: 3px;
+  box-sizing: border-box;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, .25);
+  color: $white;
+  display: inline-block;
+  padding: 18px 0;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: .3s;
+  width: 225px;
+  @content;
+
+  &:hover {
+    background-color: darken($red, 10);
+    border-color: darken($red, 10);
+  }
+
+  @if $two-buttons == true {
+    &:first-child {
+      margin-right: 25px;
+    }
+
+    &:last-child {
+      background-color: transparent;
+      border-color: $white;
+    }
+
+    &:hover {
+      background-color: darken($red, 10);
+      border-color: darken($red, 10);
+    }
+  }
+}
+
+@mixin divider($color-line: $white-gray) {
+  display: block;
+  margin: 20px auto;
+  position: relative;
+  width: 7px;
+
+  &::after,
+  &::before {
+    background-color: $color-line;
+    content: '';
+    display: block;
+    height: 1px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-1px);
+    width: 80px;
+  }
+
+  &::before {
+    left: -90px;
+  }
+
+  &::after {
+    right: -90px;
+  }
+
+  p {
+    text-align: center;
+
+    &::after {
+      background-color: $red;
+      border-radius: 50%;
+      content: '';
+      display: block;
+      height: 7px;
+      width: 7px;
+    }
+  }
+}
+
+@mixin img {
+  display: block;
+  max-width: 100%;
+}
+
+@mixin title {
+  &__title,
+  &__text {
+    @include font(14px, $normal, 29px);
+    color: $gray4;
+    margin: 20px 0;
+    text-align: center;
+  }
+
+  &__title {
+    @include font(36px, $bold, auto, 3.6px);
+    color: $gray5;
+    font-family: $title-font-family;
+    text-transform: uppercase;
+  }
+}

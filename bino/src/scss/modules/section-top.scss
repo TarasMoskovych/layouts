@@ -1,0 +1,91 @@
+.section-top {
+  background: url('../img/section-top-bg.jpg') top center no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 90%, 0 80%);
+  position: relative;
+
+  &__header {
+    @include display-flex;
+    padding: 40px 0;
+    position: relative;
+    z-index: 2;
+  }
+
+  &__menu {
+    flex-basis: 62.5%;
+
+    @media (max-width: $screen-sm) {
+      flex-basis: 100%;
+    }
+  }
+
+  &__logo {
+    @media (max-width: $screen-sm) {
+      flex-basis: 100%;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+  }
+
+  &__info {
+    padding: 180px 0 300px;
+    position: relative;
+    text-align: center;
+    z-index: 2;
+
+    @media (max-width: $screen-lg) {
+      padding-top: 100px;
+    }
+
+    @media (max-width: $screen-sm) {
+      padding: 50px 0 250px;
+    }
+
+    @media (max-width: $screen-xs) {
+      padding-bottom: 200px;
+    }
+
+    h1 {
+      @include font(24px, $normal, auto, 1.2px);
+      color: $white-gray;
+      font-family: $title-font-family;
+      text-transform: capitalize;
+
+      span {
+        @include font(72px, $bold, auto, 7.2px);
+        display: block;
+        font-family: $main-font-family;
+        margin: 30px 0 20px;
+        text-transform: uppercase;
+
+        @media (max-width: $screen-lg) {
+          font-size: 42px;
+        }
+      }
+    }
+
+    & > p {
+      @include font(14px, $normal, 24px);
+      color: $gray;
+      max-width: 600px;
+      margin: 20px auto;
+
+      @media (max-width: $screen-sm) {
+        max-width: 100%;
+      }
+    }
+  }
+
+  &::after {
+    background-color: rgba(0, 0, 0, .7);
+    content: '';
+    display: block;
+    left: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+  }
+}

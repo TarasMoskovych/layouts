@@ -1,0 +1,67 @@
+.ideas {
+  background-color: $white;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, .1);
+  box-sizing: border-box;
+  padding: 30px 50px 80px;
+  text-align: center;
+
+  @media (max-width: $screen-lg) {
+    padding: 0 50px;
+  }
+
+  @media (max-width: $screen-sm) {
+    padding: 20px;
+  }
+
+  &__icon {
+    background-color: $red;
+    clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+    margin: 50px auto;
+    height: 127px;
+    position: relative;
+    width: 127px;
+  }
+
+  &__img {
+    fill: $white;
+    left: 50%;
+    height: 40px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 35px;
+  }
+
+  &__btn {
+    @include btn {
+      font-size: 12px;
+      margin: 30px auto;
+      padding: 15px 0;
+      width: 145px;
+    };
+  }
+
+  p {
+    @include font(14px, $light, 24px, 1.05px);
+    color: $gray4;
+    font-family: $title-font-family;
+    margin: 20px 0;
+
+    &.ideas__title {
+      @include font(18px, $bold, auto, 1.35px);
+      color: $gray5;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+
+      &::after {
+        background-color: #888;
+        border-bottom: 1px solid #e1e1e1;
+        content: '';
+        display: block;
+        margin: 20px auto 0;
+        height: 1px;
+        width: 41px;
+      }
+    }
+  }
+}
