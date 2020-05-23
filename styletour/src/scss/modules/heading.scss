@@ -1,0 +1,24 @@
+.str-heading {
+  font-size: 1.714em;
+  font-weight: $bold;
+
+  &--big {
+    font-size: 3.429em;
+  }
+
+  &--medium {
+    font-size: 2.1em
+  }
+
+  &--small {
+    font-size: 1.4em;
+  }
+
+  &--x-small {
+    font-size: 1em;
+  }
+
+  &--normal {
+    font-weight: $normal;
+  }
+}

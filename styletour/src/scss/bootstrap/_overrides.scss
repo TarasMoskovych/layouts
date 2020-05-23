@@ -1,0 +1,39 @@
+.navbar-light .navbar-nav .nav-item {
+
+  &:first-child {
+    .str-navbar__link {
+      padding-left: 0;
+    }
+  }
+
+  .nav-link.str-navbar__link {
+
+    @media (max-width: $screen-sm) {
+      padding-left: $nav-padding;
+    }
+
+    &.str-btn--red {
+      color: $white;
+      padding-left: $nav-padding;
+      padding-right: $nav-padding;
+    }
+  }
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+  transition: .3s;
+
+  &:hover,
+  &:focus {
+    &::after {
+      background-color: rgba(0, 0, 0, .2);
+      content: '';
+      display: block;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      z-index: 12;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+.str-search {
+  background-color: $grey8;
+  border-bottom: 1px solid $grey9;
+  padding: 45px 0;
+
+  &__text {
+    font-size: 16px;
+    font-weight: $light-weight;
+    margin: 0;
+
+    @media (max-width: $screen-md) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__form {
+    .form-control {
+      height: 50px;
+      width: 100%;
+
+      @media (max-width: $screen-sm) {
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  &__btn {
+    font-size: 16px;
+    padding: 10px 15px;
+    text-transform: initial;
+    width: 100%;
+  }
+}

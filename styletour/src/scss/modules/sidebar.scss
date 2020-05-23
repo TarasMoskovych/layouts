@@ -1,0 +1,151 @@
+.str-sidebar {
+  border-right: 3px solid $grey3;
+  padding: 50px 0 30px;
+
+  @media (max-width: $screen-md) {
+    border: 0;
+    padding: 30px 0 0;
+  }
+
+  &__item {
+    border-bottom: 3px solid $grey3;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+
+    &-wrap {
+      @media (max-width: $screen-xs) {
+        flex-basis: 100%;
+        max-width: 100%;
+      }
+    }
+
+    &-block {
+      padding-right: 20px;
+
+      @media (max-width: $screen-lg) {
+        padding-right: 15px;
+      }
+
+      @media (max-width: $screen-md) {
+        padding: 0;
+      }
+
+      &:last-child {
+        img {
+          @media (max-width: $screen-md) {
+            height: 325px;
+            object-fit: cover;
+          }
+
+          @media (max-width: $screen-xs) {
+            height: auto;
+          }
+        }
+      }
+    }
+
+    .str-heading {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+
+    li {
+      &:last-child {
+        a {
+          color: $blue;
+          margin-top: 5px;
+        }
+      }
+    }
+
+    a {
+      color: $black;
+      font-size: 16px;
+      display: block;
+      line-height: 30px;
+      text-decoration: none;
+      text-transform: capitalize;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__banner {
+    background-color: $white;
+    padding: 35px 20px 25px;
+
+    @media (max-width: $screen-md) {
+      padding: 20px 20px 22px;
+    }
+
+    .str-heading--small {
+      @media (max-width: $screen-xl) {
+        font-size: 1.25em;
+      }
+
+      @media (max-width: $screen-lg) {
+        font-size: 1em;
+      }
+
+      @media (max-width: $screen-md) {
+        font-size: 1.1em;
+      }
+    }
+
+    .str-btn {
+      margin-top: 25px;
+
+      @media (max-width: $screen-lg) {
+        padding-left: 8px;
+        padding-right: 8px;
+      }
+    }
+  }
+
+  &__about {
+    margin-top: 40px;
+
+    .str-heading {
+      margin: 0 0 20px;
+    }
+
+    p {
+      color: $grey5;
+
+      &:last-child {
+        color: $blue2;
+      }
+    }
+  }
+
+  &__img {
+    width: 100%;
+  }
+
+  .str-carousel {
+    margin-bottom: 20px;
+
+    &__caption,
+    &__indicators {
+      background-color: $white;
+    }
+
+    &__caption {
+      border-bottom: 1px solid $grey4;
+      padding-top: 20px;
+
+      p {
+        color: $grey5;
+        font-size: 12px;
+        padding: 10px 0;
+      }
+    }
+  }
+}

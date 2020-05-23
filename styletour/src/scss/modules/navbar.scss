@@ -1,0 +1,183 @@
+.str-navbar {
+  background-color: $white;;
+  padding: 20px 0;
+
+  &--secondary {
+    background: transparent;
+    padding: 0;
+    position: absolute;
+    top: 30px;
+    width: 100%;
+    z-index: 2;
+
+    @media (max-width: $screen-lg) {
+      background: $black;
+      position: static;
+    }
+
+    .str-navbar {
+      &__wrapper {
+        align-items: flex-start;
+        background-color: $black;
+        border-radius: 4px;
+        display: flex;
+        padding: 10px 10px 5px;
+        width: 100%;
+      }
+
+      &__brand {
+        position: absolute;
+
+        @media (max-width: $screen-lg) {
+          z-index: 1;
+        }
+
+        @media (max-width: $screen-md) {
+          img {
+            height: 120px;
+          }
+        }
+      }
+
+      &__nav {
+        margin-left: 115px;
+        z-index: 2;
+
+        @media (max-width: $screen-lg) {
+          margin-left: 100px;
+        }
+      }
+
+      &__link {
+        &--brand,
+        &--simple {
+          color: $white;
+        }
+
+        &--simple {
+          font-size: 16px;
+          text-transform: capitalize;
+
+          @media (max-width: $screen-xl) {
+            font-size: $base-size;
+          }
+
+          &:hover::after {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  &__nav {
+    @media (max-width: $screen-lg) {
+      justify-content: center;
+      width: 100%;
+    }
+
+    @media (max-width: $screen-sm) {
+      margin-top: 15px;
+    }
+  }
+
+  &__brand {
+    border-left: 3px solid $red;
+
+    .str-heading {
+      line-height: .8em;
+      margin: 0;
+      padding-left: 10px;
+
+      img {
+        height: 50px;
+      }
+    }
+
+    @media (max-width: $screen-sm) {
+      margin-left: 10px;
+    }
+  }
+
+  &__toggler {
+    @media (max-width: $screen-sm) {
+      margin-right: 10px;
+    }
+  }
+
+  &__flag {
+    img {
+      vertical-align: baseline;
+    }
+  }
+
+  &__link {
+    color: $black;
+    text-transform: uppercase;
+    transition: .3s;
+
+    @media (max-width: $screen-sm) {
+      padding-left: 15px;
+
+      &:hover {
+        background-color: $grey;
+      }
+    }
+
+    &--brand {
+      font-weight: $bold;
+      font-size: 16px;
+    }
+
+    &--dropdown {
+      &:hover {
+        &::after {
+          border-bottom: 0.3em solid;
+          border-top: 0;
+        }
+      }
+    }
+
+    &--simple {
+      &::after {
+        content: '';
+        background: lighten($color: $black, $amount: 50);
+        display: block;
+        height: 1px;
+        margin-top: 5px;
+        transition: width .3s;
+        width: 0;
+
+        @media (max-width: $screen-sm) {
+          display: none;
+        }
+      }
+
+      &:hover {
+        color: lighten($color: $black, $amount: 50);
+
+        &:after {
+          width: 100%;
+
+          @media (max-width: $screen-sm) {
+            width: 0;
+          }
+        }
+      }
+    }
+  }
+
+  &__form {
+    @media (max-width: $screen-lg) {
+      justify-content: center;
+      margin: 5px 0 10px;
+      width: 100%;
+    }
+
+    @media (max-width: $screen-md) {
+      input {
+        font-size: 0.875rem;
+      }
+    }
+  }
+}
