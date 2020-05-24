@@ -1,0 +1,26 @@
+.back-to-top {
+  background-color: #121212;
+  border-radius: 50%;
+  height: 7rem;
+  left: 50%;
+  position: absolute;
+  top: -3rem;
+  transform: translateX(-50%);
+  width: 7rem;
+
+  a {
+    display: block;
+    height: 100%;
+    width: 100%;
+  }
+
+  svg {
+    animation: up 1.8s infinite;
+    color: $white;
+    font-size: 2rem;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

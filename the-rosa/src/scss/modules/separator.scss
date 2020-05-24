@@ -1,0 +1,44 @@
+.separator {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+
+  &__line {
+    animation: grow 2s forwards;
+    animation-delay: .9s;
+    background-color: $white;
+    height: .25rem;
+    max-width: 8.4rem;
+    opacity: 0;
+    position: relative;
+    width: 100%;
+
+    @media (min-width: $screen-desktop-min) {
+      max-width: 12.4rem;
+    }
+
+    &--left,
+    &--right {
+      &::before {
+        animation: grow .5s forwards;
+        animation-delay: 1.2s;
+        border: .6rem solid transparent;
+        content: '';
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+
+    &--left::before {
+      border-left-color: $white;
+      left: 0;
+    }
+
+    &--right::before {
+      border-right-color: $white;
+      right: 0;
+    }
+  }
+}

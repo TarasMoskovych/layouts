@@ -1,0 +1,76 @@
+.footer {
+  background-color: #121212;
+  color: $white;
+  padding: 7.9rem 0;
+  position: relative;
+  text-align: center;
+
+  @media (min-width: $screen-desktop-min) {
+    padding-bottom: 0;
+  }
+
+  &__block {
+    overflow: hidden;
+
+    h4 {
+      font-size: 1.9rem;
+      font-weight: 100;
+      letter-spacing: 3px;
+      margin-right: -3px;
+      margin-bottom: 3rem;
+      text-transform: uppercase;
+    }
+
+    .asterisk {
+      margin: 2.4rem 0;
+    }
+
+    @media (min-width: $screen-desktop-min) {
+      max-width: 77.5rem;
+      margin: auto;
+    }
+
+  }
+
+  &__about {
+    margin-bottom: 5.4rem;
+
+    p {
+      line-height: 2;
+    }
+  }
+
+  &__icons {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-bottom: 5.4rem;
+
+    li {
+      padding: .8rem 2rem;
+    }
+
+    svg {
+      color: $white;
+      font-size: 2rem;
+      opacity: .6;
+      transition: .5s;
+
+      @media (min-width: $screen-desktop-min) {
+        opacity: 1;
+      }
+
+      &:hover,
+      &:focus {
+        color: $secondary-font-color;
+      }
+    }
+  }
+
+  &__divider {
+    @media (min-width: $screen-desktop-min) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
