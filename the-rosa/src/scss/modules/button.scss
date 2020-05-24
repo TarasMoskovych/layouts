@@ -1,0 +1,47 @@
+.btn {
+  display: inline-block;
+  letter-spacing: 2px;
+  margin-right: -2px;
+  text-transform: uppercase;
+  transition: .3s;
+
+  &--cta {
+    background-color: $white;
+    border-radius: .4rem;
+    color: $body-font-color;
+    font-size: 1.1rem;
+    padding: .9rem 1.8rem;
+
+    &:hover,
+    &:focus {
+      background-color: $secondary-font-color;
+      color: $white;
+    }
+  }
+
+  &--body {
+    font-size: 1.5rem;
+    color: $secondary-font-color;
+    position: relative;
+
+    &::before {
+      background-color: $secondary-font-color;
+      bottom: -4px;
+      content: '';
+      height: 2px;
+      left: 0;
+      position: absolute;
+      transition: .5s;
+      width: 100%;
+    }
+
+    &:hover,
+    &:focus {
+      color: $main-font-color-dark;
+
+      &::before {
+        background-color: $main-font-color-dark;
+      }
+    }
+  }
+}

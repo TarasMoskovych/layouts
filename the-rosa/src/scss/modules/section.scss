@@ -1,0 +1,64 @@
+.section {
+  padding: 3.9rem 0;
+  overflow: hidden;
+
+  @media screen and (min-width: $screen-desktop-min) {
+    padding: 7.9rem;
+  }
+
+  &--story {
+    .heading {
+      &--global {
+        margin-top: 6.9rem;
+      }
+    }
+  }
+
+  &--recipes {
+    background: url('../img/tasteful-recipes.jpg') center no-repeat;
+    background-size: cover;
+  }
+
+  &--between {
+    align-items: center;
+    display: flex;
+    min-height: 65vh;
+  }
+
+  &--discover {
+    .info {
+      margin-bottom: 0;
+      padding-top: 3rem;
+    }
+
+    .heading {
+      margin-top: 8.9rem;
+    }
+  }
+
+  &--hero {
+    align-items: center;
+    background: url('../img/hero.jpg') center no-repeat;
+    background-size: cover;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+
+    &__description h5 {
+      color: $white;
+      font-size: 1.4rem;
+      font-weight: 100;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      margin-right: -3px;
+      margin-bottom: 1.2rem;
+    }
+  }
+
+  &--perfect-blend {
+    background: url('../img/perfect-blend.jpg') center no-repeat;
+    background-size: cover;
+  }
+}
