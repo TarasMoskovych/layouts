@@ -1,0 +1,24 @@
+.str-slider {
+  background-color: $white;
+  padding: 35px 0 20px;
+
+  &__arrow {
+    background: #ddd url('../img/nav.png') no-repeat;
+    background-position: 4px 3px;
+    padding: 12px;
+    top: 40%;
+
+    @media (max-width: $screen-md) {
+      display: none;
+    }
+
+    &__left {
+      left: 0;
+    }
+
+    &--right {
+      background-position-y: -17px;
+      right: 0;
+    }
+  }
+}

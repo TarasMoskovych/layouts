@@ -1,0 +1,19 @@
+.str-btn {
+  border: 0;
+  border-radius: 3px;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  transition: .3s;
+
+  &--red {
+    background-color: $red;
+    color: $white;
+
+    &:hover,
+    &:focus {
+      background-color: lighten($color: $red, $amount: 10);
+      color: $white;
+    }
+  }
+}
