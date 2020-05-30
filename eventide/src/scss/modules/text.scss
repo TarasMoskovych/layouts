@@ -1,0 +1,35 @@
+.evt-text {
+  font-size: $base-size;
+
+  &--white {
+    color: $white;
+  }
+
+  &--small {
+    font-size: 14px;
+  }
+
+  &--big {
+    font-size: 20px;
+  }
+
+  &--large {
+    font-size: 22px;
+  }
+
+  &--medium {
+    font-weight: $medium;
+  }
+
+  &--bold {
+    font-weight: $bold;
+  }
+
+  &--inherit {
+    font-size: inherit;
+  }
+
+  &--gray {
+    color: $gray5;
+  }
+}

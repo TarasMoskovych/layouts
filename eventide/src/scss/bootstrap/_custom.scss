@@ -1,0 +1,19 @@
+$blue: $custom-primary;
+$dark: $custom-dark;
+$body-color: $white;
+
+$btn-border-width: 0;
+$btn-font-family: $secondary-font-family;
+
+$input-height-lg: 44px;
+$input-bg: #efefef;
+$input-font-size-lg: 14px;
+
+$grid-breakpoints: (
+  xss: 0,
+  xs:  480px,
+  sm:  576px,
+  md:  768px,
+  lg:  992px,
+  xl:  1200px
+);

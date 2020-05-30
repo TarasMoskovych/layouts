@@ -1,0 +1,29 @@
+.evt-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  &--learning-objective {
+    margin-left: 40px;
+
+    li {
+      line-height: 30px;
+
+      svg {
+        color: $green;
+        margin-left: -25px;
+        margin-right: 5px;
+      }
+    }
+  }
+
+  &--linked {
+    li {
+      color: $green;
+
+      svg {
+        margin-right: 5px;
+      }
+    }
+  }
+}

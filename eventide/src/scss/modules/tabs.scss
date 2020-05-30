@@ -1,0 +1,23 @@
+.evt-tabs {
+  border: 0;
+
+  &__item {
+    text-transform: uppercase;
+  }
+
+  &__link.nav-link {
+    background-color: $gray2;
+    border: 0;
+    border-radius: 0;
+    color: $main-font-color;
+    font-family: $main-font-family;
+    font-size: 18px;
+    font-weight: $bold;
+    padding: 15px;
+
+    &.active {
+      background-color: transparent;
+      color: $custom-dark;
+    }
+  }
+}

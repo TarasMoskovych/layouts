@@ -1,0 +1,28 @@
+.evt-heading {
+  font-family: $secondary-font-family;
+  font-size: 30px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+
+  @include media-breakpoint-down(md) {
+    text-align: center;
+  }
+
+  &--bold {
+    font-weight: $bold;
+  }
+
+  &--white {
+    color: $white;
+  }
+
+  &--initial {
+    font-family: $main-font-family;
+    font-weight: $normal;
+    text-transform: initial;
+  }
+
+  &--medium {
+    font-size: 22px;
+  }
+}

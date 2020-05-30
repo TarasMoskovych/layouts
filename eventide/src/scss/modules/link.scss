@@ -1,0 +1,33 @@
+.evt-link {
+  color: $green;
+  font-family: $secondary-font-family;
+  font-weight: $bold;
+  text-transform: uppercase;
+
+  &:hover,
+  &:focus {
+    color: darken($color: $green, $amount: 15);
+    text-decoration: none;
+  }
+
+  &--collapse {
+    color: $gray3;
+    text-transform: initial;
+    transition: .3s;
+  }
+
+  &--initial {
+    text-transform: initial;
+  }
+
+  &--normal {
+    font-family: $main-font-family;
+    font-weight: $normal;
+
+    &:hover,
+    &:focus {
+      color: $green;
+      text-decoration: underline;
+    }
+  }
+}
