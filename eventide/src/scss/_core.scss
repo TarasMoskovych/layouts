@@ -5,6 +5,7 @@ body {
   font-size: $base-size;
   font-weight: $normal;
   min-width: 320px;
+  overflow-x: hidden;
 }
 
 img {
