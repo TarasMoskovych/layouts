@@ -1,0 +1,30 @@
+.evt-footer {
+
+  &__contacts {
+    background-color: $gray4;
+    padding: 70px 0;
+
+    @include media-breakpoint-down(md) {
+      text-align: center;
+    }
+
+    &-item:not(:first-child) {
+      @include media-breakpoint-down(md) {
+        margin-top: 40px;
+      }
+    }
+
+    @include media-breakpoint-down(sm) {
+      padding: 60px 0;
+    }
+  }
+
+  &__copy {
+    background-color: $gray6;
+    padding: 15px 0;
+
+    @include media-breakpoint-down(sm) {
+      text-align: center;
+    }
+  }
+}

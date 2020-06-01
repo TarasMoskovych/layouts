@@ -1,0 +1,14 @@
+body {
+  background-color: $white;
+  color: $main-font-color;
+  font-family: $main-font-family;
+  font-size: $base-size;
+  font-weight: $normal;
+  min-width: 320px;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

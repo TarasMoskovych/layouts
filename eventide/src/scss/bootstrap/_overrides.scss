@@ -1,0 +1,29 @@
+.toast {
+  margin: 10px;
+  position: fixed;
+  right: 15px;
+  top: 15px;
+
+  @include media-breakpoint-down(xs) {
+    right: 0;
+  }
+
+  img {
+    width: 50px;
+  }
+}
+
+.carousel-indicators {
+  li {
+    background: transparent;
+    border: 2px solid $white;
+    border-radius: 50%;
+    height: 10px;
+    padding: 0;
+    width: 10px;
+
+    &.active {
+      background-color: $white;
+    }
+  }
+}
